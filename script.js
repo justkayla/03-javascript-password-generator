@@ -1,21 +1,39 @@
 // Global variables
+var generateBtn = document.querySelector("#generate");
+
 var numOfChars;
-var useLowerCaseLtrs;
-var useUpperCaseLtrs;
-var useNumChars;
-var useSpecialChars;
+var useLowerCaseLtrs = ["abcdefghijklmnopqrstuvwxyz"];
+var useUpperCaseLtrs = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var useNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var useSpecialChars = ["!#$%&*+/>=<?~"];
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
 
 
 // When user clicks the Generate Password button
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 // A prompt box appears
+var password = prompt("hello");
+// whatever someone types into the prompt goes into the variable
+
+// else/if statements for yes/no special characters, yes/no lower/uppercase, yes/no numbers
 
 
 // Ask user how many characters (between 8-128)
-function howManyCharacters(){
-  numOfCharacters = parseInt( prompt("How many characters?") );
+function howManyCharacters(min=8, max=128){
+  numOfChars = parseInt( prompt("How many characters?") );
 }
+var password = prompt("How many characters");
 
 
 // Ask user if using lowercase characters
@@ -33,9 +51,9 @@ function useUpperCase(){
 
 
 // Ask user if using numeric characters
-function useNumChars(){
-  useNumChars = confirm("Do you want numbers in the password?");
-  console.log(useNumChars);
+function useOfNumbers(){
+  useNumbers = confirm("Do you want numbers in the password?");
+  console.log(useNumbers);
 }
 
 
@@ -49,28 +67,30 @@ function useLowerCase(){
 // User selects password criteria (at least one must be selected)
 
 
-// When criteria is selected, a random password is generated
+// // When criteria is selected, a random password is generated
+
 
 
 // The password is displayed in alert OR written to the page
 
-
-/*
 function generatePassword() {
   console.log("start here");
-  howManyCharacters();
-  useLowerCase();
-
-
+  numOfChars();
+  useLowerCaseLtrs();
+  useUpperCaseLtrs();
+  useNumbers();
+  useSpecialChars();
 
   return "finalpassword"
 }
-*/
 
 
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+
+
+
+/* Assignment Code
+// var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -78,8 +98,18 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// Write password to the #password input
+ function writePassword() {
+   var password = generatePassword();
+   var passwordText = document.querySelector("#password");
+
+   passwordText.value = password;
+ }
+
+*/
