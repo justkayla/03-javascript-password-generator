@@ -1,11 +1,38 @@
 // Global variables
 var generateBtn = document.querySelector("#generate");
-
 var numOfChars;
 var useLowerCaseLtrs = ["abcdefghijklmnopqrstuvwxyz"];
 var useUpperCaseLtrs = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var useNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var useSpecialChars = ["!#$%&*+/>=<?~"];
+
+
+
+// Prompt 1: How many characters? [default=10] (value comes in as string)
+
+
+// Prompt 2: Use lowercase? [y/n]
+  // If Y, use lowercase
+  // If N, do not use lowercase
+
+
+// Prompt 3: Use uppercase? [y/n]
+  // If Y, use uppercase
+  // If N, do not use uppercase
+
+
+// Prompt 4: Use numbers? [y/n]
+  // If Y, use numbers
+  // If N, do not use numbers
+
+
+// Prompt 5: Use special characters? [y/n]
+  // If Y, use special characters
+  // If N, do not use special characters
+
+
+// EACH PROMPT WILL GO INTO THE VARIABLE
+
 
 
 // Write password to the #password input
