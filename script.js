@@ -4,8 +4,7 @@ var generateBtn = document.querySelector("#generate");    // Creates a variable 
 
 // Global boolean variables
 // When the User selects "confirm" on these variables, they will be included in the password
-// Where do these connect in the functions?
-var numOfChars= 8;    // add conditional logic that min=8 and max=182, else reset to 8
+var numOfChars= 8;    // add conditional logic that min=8 and max=182, else reset
 var wantsLowerCase= true;  // Y = true
 var wantsUpperCase= true;
 var wantsNumbers= true;
@@ -59,10 +58,10 @@ function generatePassword() {
       alert("Number of characters needs to be between 8-128.")
       return generatePassword();
     };
-  useLowerCase();                   // If TRUE, then push to empty array... ELSE, then...
-  useUpperCase();          // If TRUE, then push to empty array... ELSE, then...
-  useOfNumbers();         // If TRUE, then push to empty array... ELSE, then...
-  useSpecialCharacters();    // If TRUE, then push to empty array... ELSE, then...
+  useLowerCase();                   
+  useUpperCase();          
+  useOfNumbers();         
+  useSpecialCharacters();    
     if (!wantsLowerCase && !wantsUpperCase && !wantsNumbers && !wantsSpecialChars) {
       alert("You must choose at least one option.")
       return generatePassword();
