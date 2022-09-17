@@ -28,7 +28,7 @@ function writePassword() {
 }
 
 
-// Function for combining arrays upon selection
+// Function for combining arrays according to  User's selections
 function createArray() {
   if (wantsLowerCase) {     // Don't need === true because already set to true in global scope
     comboArray = comboArray.concat(lowerCase)   // If User wants lowercase letters, add (concat) lowercase letters to comboArray
@@ -72,6 +72,7 @@ function generatePassword() {
 }
 
 
+// Randomizer that uses contents of comboArray and returns the password as a string
 function constructPassword() {
   var passwordString = "";
   console.log(passwordString);
