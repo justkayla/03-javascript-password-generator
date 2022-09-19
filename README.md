@@ -1,4 +1,4 @@
-# 02 Advanced CSS: Portfolio
+# 03 Javascript: Password Generator
 
 ## Introduction
 
